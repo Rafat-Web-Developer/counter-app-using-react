@@ -11,9 +11,13 @@ const Counter = ({ id, handlerIncrement, handlerDecrement, counterValue }) => {
           btnClassName='bg-green-400 '>
           Increment
         </Button>
-        <Button handler={() => handlerDecrement(id)} btnClassName='bg-red-400 '>
-          Decrement
-        </Button>
+        {counterValue > 0 && (
+          <Button
+            handler={() => handlerDecrement(id)}
+            btnClassName='bg-red-400 '>
+            Decrement
+          </Button>
+        )}
       </div>
     </div>
   );
