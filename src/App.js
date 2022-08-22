@@ -1,9 +1,9 @@
-import Counter from "./components/Counter";
+import CounterMaster from "./components/CounterMaster";
 
 function App() {
   return (
     <div>
-      <Counter />
+      <CounterMaster />
     </div>
   );
 }
