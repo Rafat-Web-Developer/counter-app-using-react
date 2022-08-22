@@ -2,7 +2,7 @@ import React from "react";
 
 const Count = ({ counter }) => {
   return (
-    <div class='text-2xl font-bold' id='counterResult'>
+    <div className='text-2xl font-bold' id='counterResult'>
       {counter}
     </div>
   );

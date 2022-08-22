@@ -16,6 +16,10 @@ const initialCounter = [
 const CounterMaster = () => {
   const [state, setState] = useState(initialCounter);
 
+  const totalCount = () => {
+    return state.reduce((total, counter) => total + counter.count, 0);
+  };
+
   const increment = (id) => {
     const updatedCounter = state.map((c) => {
       if (c.id === id) {
@@ -44,7 +48,7 @@ const CounterMaster = () => {
   };
 
   return (
-    <div class='max-w-md mx-auto mt-10 space-y-5'>
+    <div className='max-w-md mx-auto mt-10 space-y-5'>
       {state.map(({ id, count }) => (
         <Counter
           key={id}
@@ -54,7 +58,7 @@ const CounterMaster = () => {
           handlerDecrement={decrement}
         />
       ))}
-      <States totalCount='0' />
+      <States totalCount={totalCount()} />
     </div>
   );
 };
