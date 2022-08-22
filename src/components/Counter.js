@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "./Button";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
@@ -22,16 +23,12 @@ const Counter = () => {
             {count}
           </div>
           <div class='flex space-x-3'>
-            <button
-              class='bg-green-400 font-bold text-white px-3 py-2 rounded shadow'
-              onClick={increment}>
+            <Button handler={() => increment()} btnClass='bg-green-400 '>
               Increment
-            </button>
-            <button
-              class='bg-purple-400 font-bold text-white px-3 py-2 rounded shadow'
-              onClick={decrement}>
+            </Button>
+            <Button handler={() => decrement()} btnClass='bg-red-400 '>
               Decrement
-            </button>
+            </Button>
           </div>
         </div>
       </div>
